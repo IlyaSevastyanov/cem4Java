@@ -2,8 +2,11 @@ package domen;
 
 import java.util.Iterator;
 import java.util.List;
-
-public class StudentGroup implements Iterable<Student> {
+/**
+ * Класс StudentGroup
+ * Представляет собой структуру для создания объектов типа "StudentGroup" с номером группы и списком студентов в группе
+ */
+public class StudentGroup implements Iterable<Student>, Comparable<StudentGroup> {
     private int idStudentGroup;
     private List<Student> studentList;
 
@@ -36,5 +39,23 @@ public class StudentGroup implements Iterable<Student> {
     @Override
     public Iterator<Student> iterator() {
         return new StudentIterator(studentList);
+    }
+
+
+    @Override
+    public int compareTo(StudentGroup o) {
+        if (this.getStudentList().size() > o.getStudentList().size()) {
+            return 1;
+        }
+        if (this.getStudentList().size() < o.getStudentList().size()) {
+            return -1;
+        }
+        if (this.getIdStudentGroup()<o.getIdStudentGroup()) {
+            return -1;
+        }
+        if (this.getIdStudentGroup()>o.getIdStudentGroup()) {
+            return 1;
+        }
+        return 0;
     }
 }

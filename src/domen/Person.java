@@ -3,6 +3,7 @@ package domen;
 public abstract class  Person {
     private String name;
     private  int age;
+    private  int group;
 
     public Person(String name, int age) {
         this.name = name;

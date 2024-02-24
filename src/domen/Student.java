@@ -1,5 +1,8 @@
 package domen;
-
+/**
+ * Класс Student
+ * Представляет собой структуру для создания объектов типа "Student" с идентификатором студентов и генератором id
+ */
 public class Student extends Person implements Comparable<Student> {
     private int id;
     private static int idGenerate;
@@ -17,7 +20,14 @@ public class Student extends Person implements Comparable<Student> {
     public String toString() {
         return "Student{" + "id = " + id +  ", name = "+ super.getName() + ", age: " + super.getAge() + ")";
     }
-
+    /**
+     * @apiNote Метод для сравнения студентов по возрасту и по id
+     * @param o the object to be compared.
+     * @return возвращает:
+     * 0, если значения равны;
+     * -1, если вызываемый объект меньше o;
+     * +1, если вызываемый объект больше o.
+     */
     @Override
     public int compareTo(Student o) {
         System.out.println(this.getName() + " - " + o.getName());
