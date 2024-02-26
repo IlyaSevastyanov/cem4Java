@@ -1,6 +1,5 @@
-import domen.Student;
-import domen.StudentGroup;
-import domen.StudentStream;
+import controllers.AccountController;
+import domen.*;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -58,5 +57,15 @@ public class Main {
         System.out.println("----------------------------------------------------");
         Collections.sort(numberStream);
         System.out.println("studentStream = " + studentStream);
+        Empoyee worker = new Empoyee("Vaciliy", 34, "разнорабочий");
+        Teacher teacher = new Teacher("Alice", 56, "доцент");
+        // AccountController accountController = new AccountController();
+        // accountController.paySalary(worker, 12344);
+        // accountController.paySalary(teacher, 92400);
+        AccountController.paySalary(worker, 12344);
+        AccountController.paySalary(teacher, 92400);
+
+        Student student9 = new Student("Vasya bastard", 19);
+
     }
 }

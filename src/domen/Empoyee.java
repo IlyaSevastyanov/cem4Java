@@ -4,7 +4,7 @@ package domen;
  * Класс Employee, расширяющий класс Person
  * Представляет собой структуру для создания объектов типа "Employee" с именем, возрастом и степенью.
  */
-public class Empoyee extends Person {
+public class Empoyee extends WorkingPerson {
     private String degree;
 
     /**
@@ -18,4 +18,5 @@ public class Empoyee extends Person {
         super(name, age);
         this.degree = degree;
     }
+
 }
