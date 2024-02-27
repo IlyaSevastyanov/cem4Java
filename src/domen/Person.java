@@ -7,8 +7,6 @@ package domen;
 public abstract class Person {
     private String name;
     private int age;
-    private int group;
-
     /**
      * Конструктор класса Person
      *

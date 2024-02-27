@@ -17,5 +17,4 @@ public class Teacher extends WorkingPerson {
         super(name, age);
         this.degree = degree;
     }
-
 }
