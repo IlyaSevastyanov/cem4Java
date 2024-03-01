@@ -17,4 +17,15 @@ public class Teacher extends WorkingPerson {
         super(name, age);
         this.degree = degree;
     }
+
+    /**
+     * Возвращает строковое представление объекта Teacher.
+     * @return Строковое представление объекта Teacher.
+     */
+    @Override
+    public String toString() {
+        return "Teacher {" + "name=" + super.getName() + ", age=" + super.getAge()+
+                ", degree='" + degree + '\'' +
+                '}';
+    }
 }
